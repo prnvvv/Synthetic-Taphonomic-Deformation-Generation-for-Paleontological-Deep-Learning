@@ -1,8 +1,0 @@
-1. https://paleo.esrf.fr/datasets/1634316797
-2. https://paleo.esrf.fr/datasets/1634316843
-3. https://paleo.esrf.fr/datasets/1634318715
-4. https://paleo.esrf.fr/datasets/1634318646
-5. https://paleo.esrf.fr/datasets/1634316283
-6. https://paleo.esrf.fr/datasets/1634317509
-7.1. https://paleo.esrf.fr/datasets/1634317343
-7.2. https://paleo.esrf.fr/datasets/1634316880
