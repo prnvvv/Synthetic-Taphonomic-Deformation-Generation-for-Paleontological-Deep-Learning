@@ -13,8 +13,8 @@ from datetime import datetime
 # CONFIGURATION
 # =========================================================
 
-DATASET_ROOT = Path(__file__).resolve().parent.parent / "dataset"
-RAW = DATASET_ROOT / "raw"
+ROOT = (Path(__file__).resolve().parent / "..").resolve()
+RAW = ROOT / "dataset" / "raw"
 
 # Voxel sizes (microns) for each specimen - UPDATE BASED ON ESRF METADATA
 VOXEL_SIZES = {

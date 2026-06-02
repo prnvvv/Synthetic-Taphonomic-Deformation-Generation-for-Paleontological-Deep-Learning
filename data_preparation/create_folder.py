@@ -10,8 +10,8 @@ from pathlib import Path
 # CONFIGURATION
 # =========================================================
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DATASET_RAW = PROJECT_ROOT / "dataset" / "raw"
+ROOT = (Path(__file__).resolve().parent / "..").resolve()
+DATASET_RAW = ROOT / "dataset" / "raw"
 
 # =========================================================
 # SPECIMEN LIST: (specimen_name, id)
@@ -68,7 +68,7 @@ def create_structure():
     print("=" * 70)
     print("\nNext steps for Person 1:")
     print("1. Download ZIP files from ESRF Paleo database")
-    print("2. Extract ZIPs to C:\\Users\\Asus\\Documents\\fossils\\")
+    print(f"2. Extract ZIPs to {ROOT.parent / 'fossils'}")
     print("3. Run arrange_fossils.py to move files into this structure")
     print("4. Run clean_dataset.py to rename slices sequentially")
     print("=" * 70)

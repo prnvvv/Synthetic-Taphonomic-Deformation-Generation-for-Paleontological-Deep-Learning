@@ -11,10 +11,9 @@ from pathlib import Path
 # PATHS
 # =========================================================
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT = SCRIPT_DIR.parent
-DEFAULT_SOURCE = REPO_ROOT.parent
-DEFAULT_DEST = REPO_ROOT / "dataset" / "raw"
+ROOT = (Path(__file__).resolve().parent / "..").resolve()
+DEFAULT_SOURCE = ROOT.parent
+DEFAULT_DEST = ROOT / "dataset" / "raw"
 
 # Runtime source/destination (can be overridden by args in future)
 SOURCE = DEFAULT_SOURCE

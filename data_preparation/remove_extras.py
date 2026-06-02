@@ -11,7 +11,8 @@ from pathlib import Path
 # PATHS
 # =========================================================
 
-DATASET_ROOT = Path(os.getenv("DATASET_ROOT", Path(__file__).resolve().parents[1] / "dataset"))
+ROOT = (Path(__file__).resolve().parent / "..").resolve()
+DATASET_ROOT = Path(os.getenv("DATASET_ROOT", ROOT / "dataset"))
 RAW = DATASET_ROOT / "raw"
 EXTRAS = DATASET_ROOT / "raw_extras"
 
