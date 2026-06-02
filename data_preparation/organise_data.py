@@ -10,21 +10,22 @@ from pathlib import Path
 # PATHS
 # =========================================================
 
-SOURCE = Path(r"C:\Users\Asus\Documents\fossils")
-DEST = Path(r"C:\Users\Asus\Documents\GitHub\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning\dataset\raw")
+SOURCE = Path(r"D:\proj\fossils")
+DEST = Path(r"D:\proj\fossils\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning\dataset\raw")
 
 # =========================================================
 # MAPPING: Your folder names -> (specimen_name, id)
 # =========================================================
 
 MAPPING = {
-    "Archaeopteryx": ("archaeopteryx_london", "BMNH-37001"),
-    "Halszkaraptor": ("halszkaraptor", "MPC-D-102-109"),
-    "Tropeognathus": ("tropeognathus", "BSPG-1987-I-46"),
-    "Araripesaurus": ("araripesaurus", "BSPG-1982-I-90"),
-    "Ichthyornis (YPM-1460)": ("ichthyornis", "YPM-1460"),
-    "Ichthyornis (YPM-1775)": ("ichthyornis", "YPM-1775"),
-    "Titanosaur embryo": ("titanosaur_embryo", "MCF-PVPH-874"),
+    "Archaeopteryx_lithographica_BMNH_37001_13um_": ("archaeopteryx_london", "BMNH-37001"),
+    "107.16_mu_Halszkaraptor_jp2_": ("halszkaraptor", "MPC-D-102-109"),
+    "Tropeognathus_mesembrinus_BSPG-1987-I-46_45.92um_": ("tropeognathus", "BSPG-1987-I-46"),
+    "Araripesaurus_santanae_BSPG-1982-I-90_91.24um_": ("araripesaurus", "BSPG-1982-I-90"),
+    "HA-S_1.28_YPM1460_-8.45_8.14_CC_RC_crop_bin2jp2_": ("ichthyornis", "YPM-1460"),
+    "HA-S_1.28_YPM-1775_-9.09_6.09_CC_RC_crop_bin2jp2_": ("ichthyornis", "YPM-1775"),
+    "14.92um_Titanosaurian_embryo_skull_MCF-PVPH-874_pag_-1.12_1.49_jp2_": ("titanosaur_embryo", "MCF-PVPH-874"),
+    "HA_3.5_YPM1206-A_-13.00_14.33_CC_RC_crop_bin2jp2_": ("hesperornis", "YPM-1206-A"),
 }
 
 # =========================================================
@@ -56,17 +57,16 @@ def main():
         mesh_folder.mkdir(parents=True, exist_ok=True)
         
         # Move all files
-        files = list(src_path.glob("*"))
+        files = [f for f in src_path.rglob("*") if f.is_file()]
         file_count = 0
         
         for file in files:
-            if file.is_file():
-                dest_file = dest_folder / file.name
-                if dest_file.exists():
-                    name, ext = file.stem, file.suffix
-                    dest_file = dest_folder / f"{name}_dup{ext}"
-                shutil.move(str(file), str(dest_file))
-                file_count += 1
+            dest_file = dest_folder / file.name
+            if dest_file.exists():
+                name, ext = file.stem, file.suffix
+                dest_file = dest_folder / f"{name}_dup{ext}"
+            shutil.move(str(file), str(dest_file))
+            file_count += 1
         
         total_files += file_count
         

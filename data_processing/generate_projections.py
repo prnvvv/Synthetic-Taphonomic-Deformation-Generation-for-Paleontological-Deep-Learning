@@ -15,7 +15,7 @@ from datetime import datetime
 # CONFIGURATION
 # =========================================================
 
-PROJECT_ROOT = Path(r"C:\Users\Asus\Documents\GitHub\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning")
+PROJECT_ROOT = Path(r"D:\proj\fossils\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning")
 DATASET_ROOT = PROJECT_ROOT / "dataset"
 RAW = DATASET_ROOT / "raw"
 PROJECTIONS_OUT = DATASET_ROOT / "projections"
@@ -26,7 +26,7 @@ SPECIMENS = [
     ("araripesaurus",        "BSPG-1982-I-90"),
     ("archaeopteryx_london", "BMNH-37001"),
     ("halszkaraptor",        "MPC-D-102-109"),
-    ("hesperornis",          "YPM-1206A"),
+    ("hesperornis",          "YPM-1206-A"),
     ("ichthyornis",          "YPM-1460"),
     ("ichthyornis",          "YPM-1775"),
     ("titanosaur_embryo",    "MCF-PVPH-874"),

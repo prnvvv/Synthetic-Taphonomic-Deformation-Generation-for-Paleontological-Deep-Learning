@@ -13,7 +13,7 @@ from datetime import datetime
 # CONFIGURATION
 # =========================================================
 
-DATASET_ROOT = Path(r"C:\Users\Asus\Documents\GitHub\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning\dataset")
+DATASET_ROOT = Path(r"D:\proj\fossils\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning\dataset")
 RAW = DATASET_ROOT / "raw"
 
 # Voxel sizes (microns) for each specimen - UPDATE BASED ON ESRF METADATA

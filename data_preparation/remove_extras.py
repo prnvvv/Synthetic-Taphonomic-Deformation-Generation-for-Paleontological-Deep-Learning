@@ -10,7 +10,7 @@ from pathlib import Path
 # PATHS
 # =========================================================
 
-DATASET_ROOT = Path(r"C:\Users\Asus\Documents\GitHub\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning\dataset")
+DATASET_ROOT = Path(r"D:\proj\fossils\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning\dataset")
 RAW = DATASET_ROOT / "raw"
 EXTRAS = DATASET_ROOT / "raw_extras"
 
