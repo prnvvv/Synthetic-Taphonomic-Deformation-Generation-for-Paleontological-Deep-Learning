@@ -3,6 +3,7 @@
 TDE Dataset Cleaner - Handles nested folders (like Hesperornis)
 """
 
+import os
 import shutil
 from pathlib import Path
 
@@ -10,7 +11,7 @@ from pathlib import Path
 # PATHS
 # =========================================================
 
-DATASET_ROOT = Path(r"D:\proj\fossils\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning\dataset")
+DATASET_ROOT = Path(os.getenv("DATASET_ROOT", Path(__file__).resolve().parents[1] / "dataset"))
 RAW = DATASET_ROOT / "raw"
 EXTRAS = DATASET_ROOT / "raw_extras"
 

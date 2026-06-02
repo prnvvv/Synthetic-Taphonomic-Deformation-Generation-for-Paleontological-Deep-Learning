@@ -15,7 +15,7 @@ from datetime import datetime
 # CONFIGURATION
 # =========================================================
 
-PROJECT_ROOT = Path(r"D:\proj\fossils\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATASET_ROOT = PROJECT_ROOT / "dataset"
 RAW = DATASET_ROOT / "raw"
 PROJECTIONS_OUT = DATASET_ROOT / "projections"

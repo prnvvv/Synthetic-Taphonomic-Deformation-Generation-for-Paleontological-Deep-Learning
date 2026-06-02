@@ -3,6 +3,7 @@
 TDE Dataset Organizer - For already extracted folders
 """
 
+import argparse
 import shutil
 from pathlib import Path
 
@@ -10,8 +11,14 @@ from pathlib import Path
 # PATHS
 # =========================================================
 
-SOURCE = Path(r"D:\proj\fossils")
-DEST = Path(r"D:\proj\fossils\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning\dataset\raw")
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+DEFAULT_SOURCE = REPO_ROOT.parent
+DEFAULT_DEST = REPO_ROOT / "dataset" / "raw"
+
+# Runtime source/destination (can be overridden by args in future)
+SOURCE = DEFAULT_SOURCE
+DEST = DEFAULT_DEST
 
 # =========================================================
 # MAPPING: Your folder names -> (specimen_name, id)

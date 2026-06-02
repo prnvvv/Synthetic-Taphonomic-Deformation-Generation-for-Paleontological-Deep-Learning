@@ -10,7 +10,7 @@ from pathlib import Path
 # CONFIGURATION
 # =========================================================
 
-PROJECT_ROOT = Path(r"D:\proj\fossils\Synthetic-Taphonomic-Deformation-Generation-for-Paleontological-Deep-Learning")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATASET_RAW = PROJECT_ROOT / "dataset" / "raw"
 
 # =========================================================
