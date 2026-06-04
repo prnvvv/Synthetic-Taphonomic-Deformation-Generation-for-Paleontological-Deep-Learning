@@ -24,17 +24,17 @@ Discovery rules:
        preserving compatibility with non-ESRF flat layouts.
 
 Architecture:
-    JP2 slices → uint16 memmap volume → MIP projections (orthographic + rotational)
+    JP2 slices → streaming MIP accumulator (one-pass) → MIP projections (orthographic + rotational)
     → percentile normalisation → INTER_AREA resize → PNG
 
 Key design decisions vs naive implementation:
-    - uint16 memmap instead of float32 in-RAM   → ~8× memory reduction
-    - 2D-rotate-after-MIP for rotational views   → O(N²) vs O(N³) rotations
-    - scipy.ndimage.rotate on 2D planes          → far cheaper than 3D affine
-    - Percentile normalisation (1–99 %)          → preserves fossil detail vs min/max
-    - INTER_AREA downscale interpolation         → best anti-aliasing for shrink ops
-    - ProcessPoolExecutor at specimen level      → safe, no GIL contention
-    - Chunked slice loading with glymur          → constant RAM regardless of depth
+    - Streaming MIP accumulator instead of full volume  → O(H²) vs O(D·H²) peak RAM
+    - 2D-rotate-after-MIP for rotational views          → O(N²) vs O(N³) rotations
+    - scipy.ndimage.rotate on 2D planes                 → far cheaper than 3D affine
+    - Percentile normalisation (1–99 %)                 → preserves fossil detail vs min/max
+    - INTER_AREA downscale interpolation                → best anti-aliasing for shrink ops
+    - ProcessPoolExecutor at specimen level             → safe, no GIL contention
+    - Single-slice streaming with glymur                → ~20 MB peak RAM regardless of volume size
 
 Author  : TDE Pipeline — Person 2
 Version : 2.1.0
@@ -47,7 +47,6 @@ import argparse
 import logging
 import os
 import sys
-import tempfile
 import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import dataclass
@@ -74,7 +73,6 @@ logger = logging.getLogger("tde.projection")
 # Constants
 # ---------------------------------------------------------------------------
 OUTPUT_SIZE: Tuple[int, int] = (224, 224)          # (H, W) target resolution
-ORTHO_AXES: List[int] = [0, 1, 2]                  # axes for 6 orthographic views
 ROTATION_ANGLES: List[float] = list(range(0, 360, 15))  # 24 × 15° rotational views
 NORMALISE_PERCENTILE_LOW: float = 1.0              # lower percentile clip
 NORMALISE_PERCENTILE_HIGH: float = 99.0            # upper percentile clip
@@ -332,72 +330,117 @@ def iter_jp2_slices(
             logger.warning("Skipping %s — %s", path.name, exc)
 
 
-def load_volume_uint16(
+def stream_volume_projections(
     slice_dir: Path,
     pattern: str = "*.jp2",
-    memmap_path: Optional[Path] = None,
-) -> np.ndarray:
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
     """
-    Load a JP2 slice stack into a uint16 volume stored as a NumPy memmap.
+    Stream JP2 slices and compute all 3 orthogonal MIPs in a single pass.
+
+    Instead of loading the full D×H×W volume into memory (or a memmap),
+    this function decodes one slice at a time and accumulates running
+    maximum-intensity projections along all three axes simultaneously.
 
     Memory profile:
-        - Intermediate: one decoded slice  (H × W × 2 B)
-        - Final volume : H × W × D × 2 B   (vs × 4 B for float32)
-
-    The memmap is created in *memmap_path* (or a system temp dir) so the
-    OS can page it in/out; for very large volumes only the accessed pages
-    occupy physical RAM at any one time.
+        - One decoded slice in flight : H × W × 2 B  (~4 MB for 2048²)
+        - Running axis-0 MIP (H × W)  : H × W × 2 B  (~8 MB)
+        - Per-depth axis-1 buffer     : D × W × 2 B  (~6 MB for 1500×2000)
+        - Per-depth axis-2 buffer     : D × H × 2 B  (~6 MB for 1500×2000)
+        - Total peak                  : ~20 MB (vs O(D·H·W) for memmap)
 
     Returns
     -------
-    np.ndarray
-        Shape (D, H, W), dtype uint16, backed by a memory-mapped file.
+    mip_axis0 : np.ndarray, shape (H, W), uint16
+        Maximum Intensity Projection along depth (coronal view).
+    mip_axis1 : np.ndarray, shape (D, W), uint16
+        Maximum Intensity Projection along rows (sagittal view).
+    mip_axis2 : np.ndarray, shape (D, H), uint16
+        Maximum Intensity Projection along columns (transverse view).
     """
     paths = sorted(slice_dir.glob(pattern))
     if not paths:
-        raise FileNotFoundError(f"No JP2 files in {slice_dir}")
+        raise FileNotFoundError(f"No JP2 files matching '{pattern}' in {slice_dir}")
 
-    # Peek at first slice for shape
+    # Warn if filenames are not zero-padded (wrong Z-order risk)
+    stems = [p.stem for p in paths]
+    if not all(s.isdigit() and len(s) >= 4 for s in stems):
+        logger.warning(
+            "JP2 filenames in %s are not zero-padded (e.g. 0001.jp2) — "
+            "depth order may be incorrect. Run clean_dataset.py first.",
+            slice_dir,
+        )
+
+    # Decode first slice for dimensions
     first = glymur.Jp2k(str(paths[0]))[:]
     if first.ndim == 3:
         first = first.mean(axis=2)
+    first = first.astype(np.uint16)
     H, W = first.shape
     D = len(paths)
 
-    # Decide memmap location
-    if memmap_path is None:
-        tmp = tempfile.mktemp(suffix=".npy")
-        memmap_path = Path(tmp)
+    if D < 2:
+        logger.warning(
+            "Volume in %s has only %d slice(s) — rotational projections will be degenerate.",
+            slice_dir, D,
+        )
 
-    volume: np.ndarray = np.lib.format.open_memmap(
-        str(memmap_path), mode="w+", dtype=np.uint16, shape=(D, H, W)
-    )
+    # Initialise accumulators
+    mip_axis0: np.ndarray = first.copy()                     # running max along depth   → (H, W)
+    mip_axis1: np.ndarray = np.zeros((D, W), dtype=np.uint16)  # max along rows per depth → (D, W)
+    mip_axis2: np.ndarray = np.zeros((D, H), dtype=np.uint16)  # max along cols per depth → (D, H)
 
-    # Write first slice (already decoded)
-    volume[0] = first.astype(np.uint16)
+    # First slice
+    mip_axis1[0] = np.max(first, axis=0)  # max over rows
+    mip_axis2[0] = np.max(first, axis=1)  # max over columns
 
+    if logger.isEnabledFor(logging.DEBUG):
+        logger.debug(
+            "Slice 1/%d (file 0): shape=(%d,%d), mean=%.1f, std=%.1f, max=%d",
+            D, H, W, first.mean(), first.std(), first.max(),
+        )
+
+    # Stream remaining slices
+    processed = 1
     for idx, arr in iter_jp2_slices(slice_dir, pattern):
         if idx == 0:
-            continue                                   # already written
-        volume[idx] = arr
+            continue
 
-    volume.flush()
-    logger.debug("Volume loaded: shape=%s dtype=%s memmap=%s", volume.shape, volume.dtype, memmap_path)
-    return volume
+        # Validate shape consistency
+        if arr.shape != (H, W):
+            logger.warning(
+                "Slice %d has shape %s, expected (%d, %d) — skipping",
+                idx + 1, arr.shape, H, W,
+            )
+            continue
+
+        np.maximum(mip_axis0, arr, out=mip_axis0)   # in-place running max
+        mip_axis1[idx] = np.max(arr, axis=0)        # max over rows at this depth
+        mip_axis2[idx] = np.max(arr, axis=1)        # max over cols at this depth
+        processed += 1
+
+        if logger.isEnabledFor(logging.DEBUG):
+            logger.debug(
+                "Slice %d/%d (file %d): shape=(%d,%d), mean=%.1f, std=%.1f, max=%d",
+                processed, D, idx + 1, arr.shape[0], arr.shape[1],
+                arr.mean(), arr.std(), arr.max(),
+            )
+
+    if processed < D:
+        logger.warning(
+            "Only %d/%d slices processed from %s (%d skipped)",
+            processed, D, slice_dir, D - processed,
+        )
+
+    logger.debug(
+        "MIPs streamed: axis0=%s axis1=%s axis2=%s",
+        mip_axis0.shape, mip_axis1.shape, mip_axis2.shape,
+    )
+    return mip_axis0, mip_axis1, mip_axis2
 
 
 # ---------------------------------------------------------------------------
 # Projection helpers
 # ---------------------------------------------------------------------------
-
-def mip_along_axis(volume: np.ndarray, axis: int) -> np.ndarray:
-    """
-    Maximum Intensity Projection along *axis*.
-
-    Returns a 2-D uint16 array.  np.max is zero-copy over the memmap
-    because NumPy reads each page only as needed.
-    """
-    return np.max(volume, axis=axis)
 
 
 def percentile_normalise(image: np.ndarray) -> np.ndarray:
@@ -445,10 +488,13 @@ def make_projection(image_2d: np.ndarray) -> np.ndarray:
 # ---------------------------------------------------------------------------
 
 def generate_orthographic_projections(
-    volume: np.ndarray,
+    mips: List[np.ndarray],
 ) -> List[np.ndarray]:
     """
-    Generate 6 orthographic Maximum Intensity Projections.
+    Generate 6 orthographic Maximum Intensity Projections from pre-computed MIPs.
+
+    Expects a list of 3 MIP planes (axis 0 / axis 1 / axis 2) as produced by
+    :func:`stream_volume_projections`.
 
     Axes:
         0 (+/-)  → coronal    (anterior / posterior)
@@ -465,8 +511,7 @@ def generate_orthographic_projections(
     List of 6 uint8 224×224 arrays.
     """
     projections: List[np.ndarray] = []
-    for axis in ORTHO_AXES:
-        mip = mip_along_axis(volume, axis)
+    for mip in mips:
         proj = make_projection(mip)
         projections.append(proj)
         projections.append(np.fliplr(proj))           # opposite direction
@@ -501,14 +546,13 @@ def generate_orthographic_projections(
 # ---------------------------------------------------------------------------
 
 def generate_rotational_projections(
-    volume: np.ndarray,
-    base_axis: int = 1,
+    sagittal_mip: np.ndarray,
 ) -> List[np.ndarray]:
     """
     Generate 24 rotational MIP projections at 15° increments.
 
     Strategy (Approach B — 2D after MIP):
-        1. Compute a single MIP along *base_axis* (sagittal plane by default).
+        1. Accept the pre-computed sagittal MIP (axis-1 projection).
         2. Rotate the resulting 2D image at each of 24 angles.
         3. Normalise and resize each rotated image.
 
@@ -517,24 +561,22 @@ def generate_rotational_projections(
 
     Parameters
     ----------
-    volume : np.ndarray
-        Shape (D, H, W) uint16 volume.
-    base_axis : int
-        Axis along which the base MIP is taken before 2D rotation.
-        Default 1 (sagittal) gives the most informative starting plane.
+    sagittal_mip : np.ndarray
+        Shape (D, W) uint16 — the axis-1 MIP (sagittal view) produced by
+        :func:`stream_volume_projections`.
 
     Returns
     -------
     List of 24 uint8 224×224 arrays.
     """
-    base_mip = mip_along_axis(volume, base_axis).astype(np.float32)
+    base = sagittal_mip.astype(np.float32)
 
     projections: List[np.ndarray] = []
     for angle in ROTATION_ANGLES:
         rotated = scipy_rotate(
-            base_mip,
+            base,
             angle=angle,
-            reshape=False,      # keep original canvas size
+            reshape=True,       # grow canvas to preserve all content (no corner clipping)
             order=3,            # bicubic — good balance of fidelity vs speed
             mode="constant",
             cval=0.0,
@@ -553,7 +595,6 @@ def process_specimen(
     specimen: "ESRFSpecimen | Path",
     output_dir: Path,
     pattern: str = "*.jp2",
-    keep_memmap: bool = False,
 ) -> List[Path]:
     """
     Full pipeline for one fossil specimen volume.
@@ -570,9 +611,9 @@ def process_specimen(
     Steps
     -----
     1. Resolve the JP2 slice directory (ESRF hierarchy or flat fallback).
-    2. Load JP2 slices → uint16 memmap volume.
-    3. Generate 6 orthographic projections.
-    4. Generate 24 rotational projections.
+    2. Stream JP2 slices → compute MIPs for all 3 axes in one pass.
+    3. Generate 6 orthographic projections from pre-computed MIPs.
+    4. Generate 24 rotational projections from sagittal MIP.
     5. Save all 30 projections as PNG.
 
     Parameters
@@ -583,8 +624,6 @@ def process_specimen(
         Root directory where PNG sub-folders will be created.
     pattern : str
         Glob pattern for JP2 files.
-    keep_memmap : bool
-        If False (default), the temporary memmap file is deleted after use.
 
     Returns
     -------
@@ -594,14 +633,10 @@ def process_specimen(
     # Resolve to ESRFSpecimen if a plain Path was given
     # ------------------------------------------------------------------
     if isinstance(specimen, Path):
-        # Attempt ESRF resolution; if it yields exactly one result use it,
-        # otherwise treat the path itself as the slice directory directly.
         candidates = resolve_esrf_slice_dir(specimen, pattern)
         if len(candidates) == 1:
             esrf = candidates[0]
         elif len(candidates) > 1:
-            # Multiple volumes under one specimen_name dir — process first,
-            # log a hint to use process_dataset for the full set.
             logger.warning(
                 "[%s] Multiple volumes found; processing first (%s). "
                 "Use process_dataset() to process all volumes.",
@@ -609,7 +644,6 @@ def process_specimen(
             )
             esrf = candidates[0]
         else:
-            # No JP2 found via resolution; treat path as direct slice dir
             jp2_count = len(sorted(specimen.glob(pattern)))
             esrf = ESRFSpecimen(
                 specimen_name=specimen.name,
@@ -630,53 +664,54 @@ def process_specimen(
     out_subdir = output_dir / esrf.output_key
     out_subdir.mkdir(parents=True, exist_ok=True)
 
-    logger.info("[%s] Loading JP2 slices from %s", esrf.output_key, esrf.slice_dir)
+    # ------------------------------------------------------------------
+    # Stream slices → compute MIPs in one pass
+    # ------------------------------------------------------------------
+    logger.info("[%s] Streaming JP2 slices from %s", esrf.output_key, esrf.slice_dir)
     t0 = time.perf_counter()
 
-    memmap_path = out_subdir / f"{esrf.output_key}_volume.npy"
-    try:
-        volume = load_volume_uint16(esrf.slice_dir, pattern, memmap_path)
-        t_load = time.perf_counter() - t0
-        D, H, W = volume.shape
-        mem_mb = (D * H * W * 2) / (1024 ** 2)
-        logger.info(
-            "[%s] Volume loaded: %dx%dx%d | %.1f MiB uint16 | %.1fs",
-            esrf.output_key, D, H, W, mem_mb, t_load,
+    mip0, mip1, mip2 = stream_volume_projections(esrf.slice_dir, pattern)
+    t_mip = time.perf_counter() - t0
+    logger.info(
+        "[%s] MIPs streamed: axis0=%s axis1=%s axis2=%s | %.1fs",
+        esrf.output_key, mip0.shape, mip1.shape, mip2.shape, t_mip,
+    )
+
+    if mip0.max() == 0:
+        logger.error(
+            "[%s] Volume is entirely blank (all-zero MIP). Skipping.",
+            esrf.output_key,
         )
+        return []
 
-        # --- Generate projections ---
-        t1 = time.perf_counter()
-        ortho = generate_orthographic_projections(volume)
-        rota = generate_rotational_projections(volume)
-        all_projections = ortho + rota                 # 6 + 24 = 30
-        t_proj = time.perf_counter() - t1
-        logger.info(
-            "[%s] Projections generated: %d views | %.2fs",
-            esrf.output_key, len(all_projections), t_proj,
-        )
+    # --- Generate projections ---
+    t1 = time.perf_counter()
+    ortho = generate_orthographic_projections([mip0, mip1, mip2])
+    rota = generate_rotational_projections(mip1)
+    all_projections = ortho + rota                     # 6 + 24 = 30
+    t_proj = time.perf_counter() - t1
+    logger.info(
+        "[%s] Projections generated: %d views | %.2fs",
+        esrf.output_key, len(all_projections), t_proj,
+    )
 
-        # --- Save PNGs ---
-        saved: List[Path] = []
-        for i, proj in enumerate(all_projections):
-            if i < 6:
-                label = f"ortho_{i:02d}"
-            else:
-                angle = ROTATION_ANGLES[i - 6]
-                label = f"rot_{angle:03d}"
-            fname = out_subdir / f"{esrf.output_key}_{label}.png"
-            cv2.imwrite(str(fname), proj)
-            saved.append(fname)
+    # --- Save PNGs ---
+    saved: List[Path] = []
+    for i, proj in enumerate(all_projections):
+        if i < 6:
+            label = f"ortho_{i:02d}"
+        else:
+            angle = ROTATION_ANGLES[i - 6]
+            label = f"rot_{angle:03d}"
+        fname = out_subdir / f"{esrf.output_key}_{label}.png"
+        cv2.imwrite(str(fname), proj)
+        saved.append(fname)
 
-        logger.info(
-            "[%s] Saved %d PNGs to %s",
-            esrf.output_key, len(saved), out_subdir,
-        )
-        return saved
-
-    finally:
-        if not keep_memmap and memmap_path.exists():
-            memmap_path.unlink()
-            logger.debug("[%s] Memmap cleaned up.", esrf.output_key)
+    logger.info(
+        "[%s] Saved %d PNGs to %s",
+        esrf.output_key, len(saved), out_subdir,
+    )
+    return saved
 
 
 # ---------------------------------------------------------------------------
@@ -684,7 +719,7 @@ def process_specimen(
 # ---------------------------------------------------------------------------
 
 def _process_specimen_worker(
-    args: Tuple["ESRFSpecimen", Path, str, bool],
+    args: Tuple["ESRFSpecimen", Path, str],
 ) -> Tuple[str, List[str], Optional[str]]:
     """
     Worker entry point for multiprocessing.  Must be a top-level function
@@ -694,9 +729,9 @@ def _process_specimen_worker(
 
     Returns (output_key, saved_png_paths, error_message_or_None).
     """
-    esrf_specimen, output_dir, pattern, keep_memmap = args
+    esrf_specimen, output_dir, pattern = args
     try:
-        saved = process_specimen(esrf_specimen, output_dir, pattern, keep_memmap)
+        saved = process_specimen(esrf_specimen, output_dir, pattern)
         return esrf_specimen.output_key, [str(p) for p in saved], None
     except Exception as exc:                           # noqa: BLE001
         logger.error("[%s] FAILED: %s", esrf_specimen.output_key, exc, exc_info=True)
@@ -712,7 +747,6 @@ def process_dataset(
     output_root: Path,
     pattern: str = "*.jp2",
     max_workers: int = 4,
-    keep_memmap: bool = False,
 ) -> None:
     """
     Process an entire ESRF fossil dataset in parallel (volume-level).
@@ -733,10 +767,10 @@ def process_dataset(
     Parallelism strategy
     --------------------
     Volume-level ``ProcessPoolExecutor`` is used because:
-      - Each volume independently loads and processes its own memmap.
+      - Each volume independently streams and processes its own slices.
       - No shared state between workers → no locking needed.
-      - Each worker consumes ~(D × H × W × 2 B) RAM; tune *max_workers*
-        to: ``min(cpu_count, available_RAM_GiB // est_vol_GiB)``.
+      - Each worker consumes ~20 MB RAM (streaming); tune *max_workers*
+        to: ``min(cpu_count, available_RAM_GiB // 0.02)``.
 
     Parameters
     ----------
@@ -748,8 +782,6 @@ def process_dataset(
         Glob pattern for JP2 files within each slice directory.
     max_workers : int
         Number of parallel worker processes.
-    keep_memmap : bool
-        Whether to retain intermediate memmap files after processing.
     """
     output_root.mkdir(parents=True, exist_ok=True)
 
@@ -765,7 +797,7 @@ def process_dataset(
     )
 
     worker_args = [
-        (esrf, output_root, pattern, keep_memmap)
+        (esrf, output_root, pattern)
         for esrf in all_specimens
     ]
 
@@ -873,16 +905,16 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Number of parallel worker processes",
     )
     p.add_argument(
-        "--keep-memmap", action="store_true",
-        help="Retain intermediate memmap files (useful for debugging)",
-    )
-    p.add_argument(
         "--validate", action="store_true",
         help="Run validation checks after processing each specimen",
     )
     p.add_argument(
         "--single", type=str, default=None, metavar="SPECIMEN_DIR",
         help="Process a single specimen directory (bypass batch mode)",
+    )
+    p.add_argument(
+        "--dry-run", action="store_true",
+        help="Discover and log all volumes without generating projections",
     )
     p.add_argument("--debug", action="store_true", help="Enable DEBUG logging")
     return p
@@ -892,6 +924,32 @@ def main(argv: Optional[List[str]] = None) -> int:
     args = _build_parser().parse_args(argv)
     if args.debug:
         logging.getLogger().setLevel(logging.DEBUG)
+
+    if args.dry_run:
+        if args.single:
+            candidates = resolve_esrf_slice_dir(Path(args.single), args.pattern)
+            if not candidates:
+                logger.error("No JP2 volumes found under %s", args.single)
+                return 1
+            for esrf in candidates:
+                jp2_count = len(sorted(esrf.slice_dir.glob(args.pattern)))
+                logger.info(
+                    "VOLUME: %-40s | slices: %d | dir: %s",
+                    esrf.output_key, jp2_count, esrf.slice_dir,
+                )
+        else:
+            all_specimens = discover_esrf_dataset(Path(args.input_root), args.pattern)
+            if not all_specimens:
+                logger.info("No volumes found under %s — dataset may be empty.", args.input_root)
+            else:
+                for esrf in all_specimens:
+                    jp2_count = len(sorted(esrf.slice_dir.glob(args.pattern)))
+                    logger.info(
+                        "VOLUME: %-40s | slices: %d | dir: %s",
+                        esrf.output_key, jp2_count, esrf.slice_dir,
+                    )
+                logger.info("Dry-run complete: %d volumes found.", len(all_specimens))
+        return 0
 
     if args.single:
         # --single accepts a specimen_name directory.
@@ -903,7 +961,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             logger.error("No JP2 volumes found under %s", spec_dir)
             return 1
         for esrf in candidates:
-            process_specimen(esrf, args.output_root, args.pattern, args.keep_memmap)
+            process_specimen(esrf, args.output_root, args.pattern)
             if args.validate:
                 validate_projections(args.output_root, esrf.output_key)
     else:
@@ -912,7 +970,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             args.output_root,
             pattern=args.pattern,
             max_workers=args.workers,
-            keep_memmap=args.keep_memmap,
         )
         if args.validate:
             all_specimens = discover_esrf_dataset(args.input_root, args.pattern)
