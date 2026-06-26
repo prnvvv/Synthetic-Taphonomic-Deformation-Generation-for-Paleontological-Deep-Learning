@@ -1,0 +1,6 @@
+| Deformation Type   |   Count |   Percentage (%) | Parameter            | Mask Type       |
+|:-------------------|--------:|-----------------:|:---------------------|:----------------|
+| Compression        |     240 |               25 | c ∈ [0.30, 0.90]     | Difference mask |
+| Shearing           |     240 |               25 | k ∈ [−0.50, 0.50]    | Difference mask |
+| Stretching         |     240 |               25 | sx,sy ∈ [1.00, 1.50] | Difference mask |
+| Dissolution        |     240 |               25 | λ ∈ [0.30, 0.80]     | Ellipse region  |

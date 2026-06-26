@@ -1,0 +1,12 @@
+Column,Type,Description,Non-null,Example
+image_id,int,Unique sequential image ID,960,0
+specimen,str,Specimen key (<name>__<id>),960,araripesaurus__BSPG-1982-I-90
+original_file,str,Source projection PNG filename,960,araripesaurus__BSPG-1982-I-90_ortho_00.png
+deformation_type,str,compression | shearing | stretching | dissolution,960,compression
+param_c,float|NaN,"Compression factor c ∈ [0.3, 0.9]",240,0.7644
+param_k,float|NaN,"Shear coefficient k ∈ [−0.5, 0.5]",240,NaN
+param_sx,float|NaN,"Stretch factor sx ∈ [1.0, 1.5]",240,NaN
+param_sy,float|NaN,"Stretch factor sy ∈ [1.0, 1.5]",240,NaN
+param_lambda,float|NaN,"Dissolution intensity λ ∈ [0.3, 0.8]",240,NaN
+synthetic_file,str,Synthetic image PNG filename,960,araripesaurus__BSPG-1982-I-90_ortho_00__comp_c0.764.png
+mask_file,str,Binary mask PNG filename,960,araripesaurus__BSPG-1982-I-90_ortho_00__comp_c0.764_mask.png

@@ -1,0 +1,10 @@
+| Mask File                                                      |   Coverage (%) |   Non-zero Pixels |   Total Pixels |
+|:---------------------------------------------------------------|---------------:|------------------:|---------------:|
+| araripesaurus__BSPG-1982-I-90_ortho_00__diss_lam0.347_mask.png |           45.1 |             22628 |          50176 |
+| araripesaurus__BSPG-1982-I-90_ortho_01__diss_lam0.622_mask.png |           44.8 |             22479 |          50176 |
+| araripesaurus__BSPG-1982-I-90_ortho_02__diss_lam0.616_mask.png |           30.2 |             15162 |          50176 |
+| araripesaurus__BSPG-1982-I-90_ortho_03__diss_lam0.322_mask.png |           21.2 |             10652 |          50176 |
+| araripesaurus__BSPG-1982-I-90_ortho_04__diss_lam0.535_mask.png |           16   |              8030 |          50176 |
+| araripesaurus__BSPG-1982-I-90_ortho_05__diss_lam0.650_mask.png |           29.8 |             14949 |          50176 |
+| araripesaurus__BSPG-1982-I-90_rot_000__diss_lam0.370_mask.png  |           16.9 |              8477 |          50176 |
+| araripesaurus__BSPG-1982-I-90_rot_015__diss_lam0.584_mask.png  |           12   |              6008 |          50176 |

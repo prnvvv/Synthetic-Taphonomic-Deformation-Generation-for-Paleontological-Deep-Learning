@@ -1,0 +1,19 @@
+| Path                        |   Depth | Contents                                          |
+|:----------------------------|--------:|:--------------------------------------------------|
+| dataset/                    |       0 | Root dataset directory                            |
+| ├── raw/                    |       1 | Raw CT data root                                  |
+| │   ├── <specimen_name>/    |       2 | Specimen taxon folder (e.g. archaeopteryx_london) |
+| │   │   └── <specimen_id>/  |       3 | Acquisition ID folder (e.g. BMNH-37001)           |
+| │   │       ├── org_slices/ |       4 | JP2 CT slice directory (canonical ESRF name)      |
+| │   │       │   └── *.jp2   |       5 | JPEG2000 CT slices (uint16, ordered)              |
+| │   │       └── mesh/       |       4 | 3-D surface mesh files (OBJ/PLY)                  |
+| ├── projections/            |       1 | 2-D projection root                               |
+| │   └── <specimen>__<id>/   |       2 | Specimen projection folder (<name>__<id>)         |
+| │       ├── *_ortho_00.png  |       3 | Orthographic projection PNG                       |
+| │       └── *_rot_000.png   |       3 | Rotational projection PNG                         |
+| └── synthetic/              |       1 | Synthetic dataset root                            |
+| ├── synthetic_images/       |       2 | Deformed projection images                        |
+| │   └── *__comp*.png        |       3 | Example compression image                         |
+| ├── deformation_masks/      |       2 | Binary deformation masks                          |
+| │   └── *_mask.png          |       3 | Example mask file                                 |
+| └── synthetic_labels.csv    |       2 | Per-image label CSV (11 columns)                  |

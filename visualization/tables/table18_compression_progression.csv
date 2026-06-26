@@ -1,0 +1,7 @@
+c value,Description,Visible Height (px),Height Reduction (%)
+1.0,Original (no compression),224,0
+0.3,"Vertical compression, scale=0.3",67,70%
+0.45,"Vertical compression, scale=0.45",100,55%
+0.6,"Vertical compression, scale=0.6",134,40%
+0.75,"Vertical compression, scale=0.75",168,25%
+0.9,"Vertical compression, scale=0.9",201,10%

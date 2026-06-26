@@ -1,0 +1,10 @@
+| Specimen           | Specimen ID                      |   Voxel Size (µm) | Taxonomy          |   Projections |   Synthetic Images |
+|:-------------------|:---------------------------------|------------------:|:------------------|--------------:|-------------------:|
+| Araripesaurus      | araripesaurus__BSPG-1982-I-90    |             45.92 | Pterosaur         |            30 |                120 |
+| Archaeopteryx      | archaeopteryx_london__BMNH-37001 |             13    | Bird              |            30 |                120 |
+| Halszkaraptor      | halszkaraptor__MPC-D-102-109     |            107.16 | Dromaeosaurid     |            30 |                120 |
+| Hesperornis        | hesperornis__YPM-1206-A          |              3.5  | Sauropod (embryo) |            30 |                120 |
+| Ichthyornis (1460) | ichthyornis__YPM-1460            |              1.28 | Bird              |            30 |                120 |
+| Ichthyornis (1775) | ichthyornis__YPM-1775            |              1.28 | Bird              |            30 |                120 |
+| Titanosaur Emb.    | titanosaur_embryo__MCF-PVPH-874  |             14.92 | Pterosaur         |            30 |                120 |
+| Tropeognathus      | tropeognathus__BSPG-1987-I-46    |             45.92 | Bird              |            30 |                120 |

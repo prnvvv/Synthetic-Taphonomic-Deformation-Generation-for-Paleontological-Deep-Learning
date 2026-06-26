@@ -1,0 +1,6 @@
+| Deformation   | Parameter          | Synthetic File                                                         | Mask File                                                                   |
+|:--------------|:-------------------|:-----------------------------------------------------------------------|:----------------------------------------------------------------------------|
+| Compression   | c=0.8549           | archaeopteryx_london__BMNH-37001_ortho_00__comp_c0.855.png             | archaeopteryx_london__BMNH-37001_ortho_00__comp_c0.855_mask.png             |
+| Shearing      | k=-0.4751          | archaeopteryx_london__BMNH-37001_ortho_00__shear_k-0.475.png           | archaeopteryx_london__BMNH-37001_ortho_00__shear_k-0.475_mask.png           |
+| Stretching    | sx=1.278, sy=1.317 | archaeopteryx_london__BMNH-37001_ortho_00__stretch_sx1.278_sy1.317.png | archaeopteryx_london__BMNH-37001_ortho_00__stretch_sx1.278_sy1.317_mask.png |
+| Dissolution   | λ=0.3529           | archaeopteryx_london__BMNH-37001_ortho_00__diss_lam0.353.png           | archaeopteryx_london__BMNH-37001_ortho_00__diss_lam0.353_mask.png           |

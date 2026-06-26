@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="503.28pt" height="336.168pt" viewBox="0 0 503.28 336.168" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-06-26T14:49:12.919519</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 336.168 
+L 503.28 336.168 
+L 503.28 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 3.6 57.194591 
+L 162.3456 57.194591 
+L 162.3456 38.478682 
+L 3.6 38.478682 
+z
+" style="fill: #4c72b0; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="fill: #ffffff; font: 700 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="82.9728" y="49.29355" transform="rotate(-0 82.9728 49.29355)">Metric</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 162.3456 57.194591 
+L 301.248 57.194591 
+L 301.248 38.478682 
+L 162.3456 38.478682 
+z
+" style="fill: #4c72b0; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="fill: #ffffff; font: 700 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="231.7968" y="49.29355" transform="rotate(-0 231.7968 49.29355)">Value</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 301.248 57.194591 
+L 499.68 57.194591 
+L 499.68 38.478682 
+L 301.248 38.478682 
+z
+" style="fill: #4c72b0; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="fill: #ffffff; font: 700 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="400.464" y="49.29355" transform="rotate(-0 400.464 49.29355)">Notes</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 3.6 75.9105 
+L 162.3456 75.9105 
+L 162.3456 57.194591 
+L 3.6 57.194591 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="68.114069" transform="rotate(-0 19.47456 68.114069)">Number of Specimens</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 162.3456 75.9105 
+L 301.248 75.9105 
+L 301.248 57.194591 
+L 162.3456 57.194591 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="68.114069" transform="rotate(-0 176.23584 68.114069)">8</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 301.248 75.9105 
+L 499.68 75.9105 
+L 499.68 57.194591 
+L 301.248 57.194591 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="68.114069" transform="rotate(-0 321.0912 68.114069)">All archosaurs, ESRF Paleo CT</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 3.6 94.626409 
+L 162.3456 94.626409 
+L 162.3456 75.9105 
+L 3.6 75.9105 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="86.825408" transform="rotate(-0 19.47456 86.825408)">Projection Images (total)</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 162.3456 94.626409 
+L 301.248 94.626409 
+L 301.248 75.9105 
+L 162.3456 75.9105 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="86.829978" transform="rotate(-0 176.23584 86.829978)">240</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 301.248 94.626409 
+L 499.68 94.626409 
+L 499.68 75.9105 
+L 301.248 75.9105 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="86.829978" transform="rotate(-0 321.0912 86.829978)">8 specimens × 30</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 3.6 113.342318 
+L 162.3456 113.342318 
+L 162.3456 94.626409 
+L 3.6 94.626409 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="105.541317" transform="rotate(-0 19.47456 105.541317)">Projections per Specimen</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 162.3456 113.342318 
+L 301.248 113.342318 
+L 301.248 94.626409 
+L 162.3456 94.626409 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="105.545887" transform="rotate(-0 176.23584 105.545887)">30</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 301.248 113.342318 
+L 499.68 113.342318 
+L 499.68 94.626409 
+L 301.248 94.626409 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="105.545887" transform="rotate(-0 321.0912 105.545887)">6 ortho + 24 rotational</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 3.6 132.058227 
+L 162.3456 132.058227 
+L 162.3456 113.342318 
+L 3.6 113.342318 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="124.255702" transform="rotate(-0 19.47456 124.255702)">Orthographic Views</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 162.3456 132.058227 
+L 301.248 132.058227 
+L 301.248 113.342318 
+L 162.3456 113.342318 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="124.261796" transform="rotate(-0 176.23584 124.261796)">6 (3 axes × 2 directions)</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 301.248 132.058227 
+L 499.68 132.058227 
+L 499.68 113.342318 
+L 301.248 113.342318 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="124.255702" transform="rotate(-0 321.0912 124.255702)">Coronal, sagittal, transverse + flips</text>
+    </g>
+    <g id="patch_17">
+     <path d="M 3.6 150.774136 
+L 162.3456 150.774136 
+L 162.3456 132.058227 
+L 3.6 132.058227 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="142.977705" transform="rotate(-0 19.47456 142.977705)">Rotational Views</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 162.3456 150.774136 
+L 301.248 150.774136 
+L 301.248 132.058227 
+L 162.3456 132.058227 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="142.977705" transform="rotate(-0 176.23584 142.977705)">24 (0°–345°, Δ15°)</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 301.248 150.774136 
+L 499.68 150.774136 
+L 499.68 132.058227 
+L 301.248 132.058227 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_18">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="142.971612" transform="rotate(-0 321.0912 142.971612)">2D-after-MIP (sagittal MIP rotated)</text>
+    </g>
+    <g id="patch_20">
+     <path d="M 3.6 169.490045 
+L 162.3456 169.490045 
+L 162.3456 150.774136 
+L 3.6 150.774136 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_19">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="161.693614" transform="rotate(-0 19.47456 161.693614)">Rotation Step</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 162.3456 169.490045 
+L 301.248 169.490045 
+L 301.248 150.774136 
+L 162.3456 150.774136 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_20">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="161.693614" transform="rotate(-0 176.23584 161.693614)">15°</text>
+    </g>
+    <g id="patch_22">
+     <path d="M 301.248 169.490045 
+L 499.68 169.490045 
+L 499.68 150.774136 
+L 301.248 150.774136 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_21">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="161.693614" transform="rotate(-0 321.0912 161.693614)">Covers full 360°</text>
+    </g>
+    <g id="patch_23">
+     <path d="M 3.6 188.205955 
+L 162.3456 188.205955 
+L 162.3456 169.490045 
+L 3.6 169.490045 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_22">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="180.40343" transform="rotate(-0 19.47456 180.40343)">Synthetic Images (total)</text>
+    </g>
+    <g id="patch_24">
+     <path d="M 162.3456 188.205955 
+L 301.248 188.205955 
+L 301.248 169.490045 
+L 162.3456 169.490045 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_23">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="180.409523" transform="rotate(-0 176.23584 180.409523)">960</text>
+    </g>
+    <g id="patch_25">
+     <path d="M 301.248 188.205955 
+L 499.68 188.205955 
+L 499.68 169.490045 
+L 301.248 169.490045 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_24">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="180.409523" transform="rotate(-0 321.0912 180.409523)">240 inputs × 4 deformations</text>
+    </g>
+    <g id="patch_26">
+     <path d="M 3.6 206.921864 
+L 162.3456 206.921864 
+L 162.3456 188.205955 
+L 3.6 188.205955 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_25">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="199.119339" transform="rotate(-0 19.47456 199.119339)">Deformation Types</text>
+    </g>
+    <g id="patch_27">
+     <path d="M 162.3456 206.921864 
+L 301.248 206.921864 
+L 301.248 188.205955 
+L 162.3456 188.205955 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_26">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="199.125433" transform="rotate(-0 176.23584 199.125433)">4</text>
+    </g>
+    <g id="patch_28">
+     <path d="M 301.248 206.921864 
+L 499.68 206.921864 
+L 499.68 188.205955 
+L 301.248 188.205955 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_27">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="199.119339" transform="rotate(-0 321.0912 199.119339)">Compression, shearing, stretching, dissolution</text>
+    </g>
+    <g id="patch_29">
+     <path d="M 3.6 225.637773 
+L 162.3456 225.637773 
+L 162.3456 206.921864 
+L 3.6 206.921864 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_28">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="217.835248" transform="rotate(-0 19.47456 217.835248)">Images per Deformation</text>
+    </g>
+    <g id="patch_30">
+     <path d="M 162.3456 225.637773 
+L 301.248 225.637773 
+L 301.248 206.921864 
+L 162.3456 206.921864 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_29">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="217.841342" transform="rotate(-0 176.23584 217.841342)">240</text>
+    </g>
+    <g id="patch_31">
+     <path d="M 301.248 225.637773 
+L 499.68 225.637773 
+L 499.68 206.921864 
+L 301.248 206.921864 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_30">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="217.841342" transform="rotate(-0 321.0912 217.841342)">Balanced; seed=42</text>
+    </g>
+    <g id="patch_32">
+     <path d="M 3.6 244.353682 
+L 162.3456 244.353682 
+L 162.3456 225.637773 
+L 3.6 225.637773 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_31">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="236.551157" transform="rotate(-0 19.47456 236.551157)">Binary Masks (total)</text>
+    </g>
+    <g id="patch_33">
+     <path d="M 162.3456 244.353682 
+L 301.248 244.353682 
+L 301.248 225.637773 
+L 162.3456 225.637773 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_32">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="236.557251" transform="rotate(-0 176.23584 236.557251)">960</text>
+    </g>
+    <g id="patch_34">
+     <path d="M 301.248 244.353682 
+L 499.68 244.353682 
+L 499.68 225.637773 
+L 301.248 225.637773 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_33">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="236.551157" transform="rotate(-0 321.0912 236.551157)">One mask per synthetic image</text>
+    </g>
+    <g id="patch_35">
+     <path d="M 3.6 263.069591 
+L 162.3456 263.069591 
+L 162.3456 244.353682 
+L 3.6 244.353682 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_34">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="255.267066" transform="rotate(-0 19.47456 255.267066)">Image Resolution</text>
+    </g>
+    <g id="patch_36">
+     <path d="M 162.3456 263.069591 
+L 301.248 263.069591 
+L 301.248 244.353682 
+L 162.3456 244.353682 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_35">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="255.27316" transform="rotate(-0 176.23584 255.27316)">224 × 224 px</text>
+    </g>
+    <g id="patch_37">
+     <path d="M 301.248 263.069591 
+L 499.68 263.069591 
+L 499.68 244.353682 
+L 301.248 244.353682 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_36">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="255.267066" transform="rotate(-0 321.0912 255.267066)">INTER_AREA resize from raw MIP</text>
+    </g>
+    <g id="patch_38">
+     <path d="M 3.6 281.7855 
+L 162.3456 281.7855 
+L 162.3456 263.069591 
+L 3.6 263.069591 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_37">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="273.976881" transform="rotate(-0 19.47456 273.976881)">Image Format</text>
+    </g>
+    <g id="patch_39">
+     <path d="M 162.3456 281.7855 
+L 301.248 281.7855 
+L 301.248 263.069591 
+L 162.3456 263.069591 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_38">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="273.982975" transform="rotate(-0 176.23584 273.982975)">PNG (uint8 grayscale)</text>
+    </g>
+    <g id="patch_40">
+     <path d="M 301.248 281.7855 
+L 499.68 281.7855 
+L 499.68 263.069591 
+L 301.248 263.069591 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_39">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="273.982975" transform="rotate(-0 321.0912 273.982975)">Grayscale, no color channels</text>
+    </g>
+    <g id="patch_41">
+     <path d="M 3.6 300.501409 
+L 162.3456 300.501409 
+L 162.3456 281.7855 
+L 3.6 281.7855 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_40">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="292.704978" transform="rotate(-0 19.47456 292.704978)">Random Seed</text>
+    </g>
+    <g id="patch_42">
+     <path d="M 162.3456 300.501409 
+L 301.248 300.501409 
+L 301.248 281.7855 
+L 162.3456 281.7855 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_41">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="292.704978" transform="rotate(-0 176.23584 292.704978)">42</text>
+    </g>
+    <g id="patch_43">
+     <path d="M 301.248 300.501409 
+L 499.68 300.501409 
+L 499.68 281.7855 
+L 301.248 281.7855 
+z
+" style="fill: #ffffff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_42">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="292.698884" transform="rotate(-0 321.0912 292.698884)">Reproducible with np.random.default_rng(42)</text>
+    </g>
+    <g id="patch_44">
+     <path d="M 3.6 319.217318 
+L 162.3456 319.217318 
+L 162.3456 300.501409 
+L 3.6 300.501409 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_43">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="19.47456" y="311.420887" transform="rotate(-0 19.47456 311.420887)">Label Format</text>
+    </g>
+    <g id="patch_45">
+     <path d="M 162.3456 319.217318 
+L 301.248 319.217318 
+L 301.248 300.501409 
+L 162.3456 300.501409 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_44">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="176.23584" y="311.420887" transform="rotate(-0 176.23584 311.420887)">CSV (11 columns)</text>
+    </g>
+    <g id="patch_46">
+     <path d="M 301.248 319.217318 
+L 499.68 319.217318 
+L 499.68 300.501409 
+L 301.248 300.501409 
+z
+" style="fill: #f0f4ff; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_45">
+     <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="321.0912" y="311.414793" transform="rotate(-0 321.0912 311.414793)">image_id, specimen, deformation_type, params, …</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_46">
+   <text style="font: 700 10px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="251.64" y="10.378125" transform="rotate(-0 251.64 10.378125)">TDE Dataset Summary Statistics</text>
+  </g>
+ </g>
+</svg>

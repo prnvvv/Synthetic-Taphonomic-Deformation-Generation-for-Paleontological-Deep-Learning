@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\caption{TDE function call graph node descriptions.}
+\label{tab:function_graph}
+\begin{tabular}{lrr}
+\toprule
+Function & Module & Role \\
+\midrule
+main() & generate\_projections.py & CLI entry point \\
+process\_dataset() & generate\_projections.py & Batch dataset processor \\
+discover\_esrf\_dataset() & generate\_projections.py & ESRF volume discovery \\
+resolve\_esrf\_slice\_dir() & generate\_projections.py & Per-specimen JP2 resolver \\
+process\_specimen() & generate\_projections.py & Single-specimen full pipeline \\
+stream\_volume\_projections() & generate\_projections.py & Streaming MIP accumulator \\
+iter\_jp2\_slices() & generate\_projections.py & JP2 slice iterator \\
+generate\_orthographic\_projections() & generate\_projections.py & 6 orthographic view generator \\
+generate\_rotational\_projections() & generate\_projections.py & 24 rotational view generator \\
+make\_projection() & generate\_projections.py & MIP → normalize → resize \\
+percentile\_normalise() & generate\_projections.py & 1–99\% percentile clip \\
+resize\_to\_output() & generate\_projections.py & INTER\_AREA resize to 224² \\
+process\_dataset\_syn() & generate\_synthetic.py & Dataset-level deformation loop \\
+process\_image() & generate\_synthetic.py & Per-image deformation applicator \\
+apply\_compression() & generate\_synthetic.py & Vertical compression \\
+apply\_shearing() & generate\_synthetic.py & Horizontal shear \\
+apply\_stretching() & generate\_synthetic.py & Anisotropic stretch \\
+apply\_dissolution() & generate\_synthetic.py & Intensity dissolution \\
+\_difference\_mask() & generate\_synthetic.py & Difference-based mask \\
+\_random\_ellipse\_mask() & generate\_synthetic.py & Random ellipse mask \\
+\bottomrule
+\end{tabular}
+\end{table}

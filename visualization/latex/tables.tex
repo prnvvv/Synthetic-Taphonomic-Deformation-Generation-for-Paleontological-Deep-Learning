@@ -1,0 +1,19 @@
+% IEEE Access — table environments
+% Generated automatically
+
+\begin{table}[htbp]
+    \centering
+    \caption{TDE pipeline stages, responsible parties, inputs, outputs, and key functions.}
+    \label{tab:pipeline_stages}
+    \begin{tabular}{lrrrr}
+\toprule
+Stage & Responsible & Input & Output & Key Tool \\
+\midrule
+Data Preparation & Person 1 & Raw ZIP archives & Extracted folders & File system \\
+Organization & Person 1 & Organized folders & Hierarchical dataset tree & shutil.move \\
+Cleaning & Person 1 & Unsorted JP2 slices & Renamed sequential slices & rename\_sequential() \\
+Projection & Person 2 & Sequential JP2 slices & 30 PNG views/specimen & stream\_volume\_projections() \\
+Deformation & Person 3 & 224×224 PNG projections & 960 synthetic images + 960 masks & apply\_compression/shearing/stretching/dissolution() \\
+\bottomrule
+\end{tabular}
+  \end{table}

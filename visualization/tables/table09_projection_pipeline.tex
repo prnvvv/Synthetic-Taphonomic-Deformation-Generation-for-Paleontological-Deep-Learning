@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\caption{Detailed step-by-step specification of the TDE streaming MIP projection pipeline.}
+\label{tab:projection_pipeline}
+\begin{tabular}{lrrrr}
+\toprule
+Step & Function & Input Shape & Output Shape & Memory \\
+\midrule
+JP2 Decode & glymur.Jp2k[:] & H×W uint16 & H×W uint16 & O(H·W) \\
+MIP Accumulation & np.maximum(mip, arr, out=mip) & H×W + H×W & 3 MIP planes & O(H·W) \\
+Percentile Norm. & percentile\_normalise() & H×W uint16 & H×W uint8 & O(H·W) \\
+INTER\_AREA Resize & cv2.resize(INTER\_AREA) & H×W uint8 & 224×224 uint8 & O(224²) \\
+Orthographic Save & cv2.imwrite() & H×W uint8 & PNG file & O(1) \\
+2D Rotation & scipy.ndimage.rotate(order=3) & H×W float32 & variable float32 & O(max\_dim²) \\
+Rotational Save & cv2.imwrite() & 224×224 uint8 & PNG file & O(1) \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,22 @@
+| Function                            | Module                  | Role                             |
+|:------------------------------------|:------------------------|:---------------------------------|
+| main()                              | generate_projections.py | CLI entry point                  |
+| process_dataset()                   | generate_projections.py | Batch dataset processor          |
+| discover_esrf_dataset()             | generate_projections.py | ESRF volume discovery            |
+| resolve_esrf_slice_dir()            | generate_projections.py | Per-specimen JP2 resolver        |
+| process_specimen()                  | generate_projections.py | Single-specimen full pipeline    |
+| stream_volume_projections()         | generate_projections.py | Streaming MIP accumulator        |
+| iter_jp2_slices()                   | generate_projections.py | JP2 slice iterator               |
+| generate_orthographic_projections() | generate_projections.py | 6 orthographic view generator    |
+| generate_rotational_projections()   | generate_projections.py | 24 rotational view generator     |
+| make_projection()                   | generate_projections.py | MIP → normalize → resize         |
+| percentile_normalise()              | generate_projections.py | 1–99% percentile clip            |
+| resize_to_output()                  | generate_projections.py | INTER_AREA resize to 224²        |
+| process_dataset_syn()               | generate_synthetic.py   | Dataset-level deformation loop   |
+| process_image()                     | generate_synthetic.py   | Per-image deformation applicator |
+| apply_compression()                 | generate_synthetic.py   | Vertical compression             |
+| apply_shearing()                    | generate_synthetic.py   | Horizontal shear                 |
+| apply_stretching()                  | generate_synthetic.py   | Anisotropic stretch              |
+| apply_dissolution()                 | generate_synthetic.py   | Intensity dissolution            |
+| _difference_mask()                  | generate_synthetic.py   | Difference-based mask            |
+| _random_ellipse_mask()              | generate_synthetic.py   | Random ellipse mask              |

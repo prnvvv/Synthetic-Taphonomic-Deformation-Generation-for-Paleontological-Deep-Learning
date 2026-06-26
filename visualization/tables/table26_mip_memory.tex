@@ -1,0 +1,12 @@
+\begin{table}[htbp]
+\caption{Memory comparison between naive full-volume and streaming MIP approaches in the TDE projection pipeline.}
+\label{tab:mip_memory}
+\begin{tabular}{lrrrr}
+\toprule
+Approach & Peak RAM & Example (2048², 1000 slices) & Implementation & Rotation Strategy \\
+\midrule
+Naive full-volume load & O(D·H·W·2 bytes) & \textasciitilde 8.0 GB & volume = np.zeros((D,H,W)) & 3D affine O(D·H·W) \\
+Streaming MIP (TDE) & O(H·W·2 bytes) + 3 MIP planes & \textasciitilde 24 MB & np.maximum(mip, arr, out=mip) & 2D rotate-after-MIP O(H·W) \\
+\bottomrule
+\end{tabular}
+\end{table}

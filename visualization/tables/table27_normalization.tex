@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\caption{Percentile normalization parameters and their rationale in the TDE pipeline.}
+\label{tab:normalization}
+\begin{tabular}{lrr}
+\toprule
+Parameter & Value & Rationale \\
+\midrule
+Low percentile & 1.0\% & Removes dead/hot pixel artefacts \\
+High percentile & 99.0\% & Removes detector saturation spikes \\
+Input dtype & uint16 & Raw JPEG2000 CT output \\
+Output dtype & uint8 & PNG-compatible, 8-bit grayscale \\
+Method & clip → rescale to [0,255] & Preserves mid-range bone contrast \\
+OpenCV interpolation & INTER\_AREA & Optimal anti-aliasing for downsizing \\
+\bottomrule
+\end{tabular}
+\end{table}

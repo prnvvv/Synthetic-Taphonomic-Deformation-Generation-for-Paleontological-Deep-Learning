@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\caption{Column schema for \texttt{synthetic\_labels.csv}.}
+\label{tab:csv_schema}
+\begin{tabular}{lrrrr}
+\toprule
+Column & Type & Description & Non-null & Example \\
+\midrule
+image\_id & int & Unique sequential image ID & 960 & 0 \\
+specimen & str & Specimen key (<name>\_\_<id>) & 960 & araripesaurus\_\_BSPG-1982-I-90 \\
+original\_file & str & Source projection PNG filename & 960 & araripesaurus\_\_BSPG-1982-I-90\_ortho\_00.png \\
+deformation\_type & str & compression | shearing | stretching | dissolution & 960 & compression \\
+param\_c & float|NaN & Compression factor c ∈ [0.3, 0.9] & 240 & 0.7644 \\
+param\_k & float|NaN & Shear coefficient k ∈ [−0.5, 0.5] & 240 & NaN \\
+param\_sx & float|NaN & Stretch factor sx ∈ [1.0, 1.5] & 240 & NaN \\
+param\_sy & float|NaN & Stretch factor sy ∈ [1.0, 1.5] & 240 & NaN \\
+param\_lambda & float|NaN & Dissolution intensity λ ∈ [0.3, 0.8] & 240 & NaN \\
+synthetic\_file & str & Synthetic image PNG filename & 960 & araripesaurus\_\_BSPG-1982-I-90\_ortho\_00\_\_comp\_c0.764.png \\
+mask\_file & str & Binary mask PNG filename & 960 & araripesaurus\_\_BSPG-1982-I-90\_ortho\_00\_\_comp\_c0.764\_mask.png \\
+\bottomrule
+\end{tabular}
+\end{table}

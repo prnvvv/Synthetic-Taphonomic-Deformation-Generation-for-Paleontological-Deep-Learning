@@ -1,0 +1,4 @@
+| Approach               | Peak RAM                      | Example (2048², 1000 slices)   | Implementation                | Rotation Strategy          |
+|:-----------------------|:------------------------------|:-------------------------------|:------------------------------|:---------------------------|
+| Naive full-volume load | O(D·H·W·2 bytes)              | ~8.0 GB                        | volume = np.zeros((D,H,W))    | 3D affine O(D·H·W)         |
+| Streaming MIP (TDE)    | O(H·W·2 bytes) + 3 MIP planes | ~24 MB                         | np.maximum(mip, arr, out=mip) | 2D rotate-after-MIP O(H·W) |

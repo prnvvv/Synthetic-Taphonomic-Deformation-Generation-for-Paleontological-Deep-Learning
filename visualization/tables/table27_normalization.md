@@ -1,0 +1,8 @@
+| Parameter            | Value                     | Rationale                            |
+|:---------------------|:--------------------------|:-------------------------------------|
+| Low percentile       | 1.0%                      | Removes dead/hot pixel artefacts     |
+| High percentile      | 99.0%                     | Removes detector saturation spikes   |
+| Input dtype          | uint16                    | Raw JPEG2000 CT output               |
+| Output dtype         | uint8                     | PNG-compatible, 8-bit grayscale      |
+| Method               | clip → rescale to [0,255] | Preserves mid-range bone contrast    |
+| OpenCV interpolation | INTER_AREA                | Optimal anti-aliasing for downsizing |

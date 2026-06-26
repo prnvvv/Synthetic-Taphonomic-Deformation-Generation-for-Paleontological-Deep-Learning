@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\caption{TDE dataset folder hierarchy with path descriptions.}
+\label{tab:folder_structure}
+\begin{tabular}{lrr}
+\toprule
+Path & Depth & Contents \\
+\midrule
+dataset/ & 0 & Root dataset directory \\
+├── raw/ & 1 & Raw CT data root \\
+│   ├── <specimen\_name>/ & 2 & Specimen taxon folder (e.g. archaeopteryx\_london) \\
+│   │   └── <specimen\_id>/ & 3 & Acquisition ID folder (e.g. BMNH-37001) \\
+│   │       ├── org\_slices/ & 4 & JP2 CT slice directory (canonical ESRF name) \\
+│   │       │   └── *.jp2 & 5 & JPEG2000 CT slices (uint16, ordered) \\
+│   │       └── mesh/ & 4 & 3-D surface mesh files (OBJ/PLY) \\
+├── projections/ & 1 & 2-D projection root \\
+│   └── <specimen>\_\_<id>/ & 2 & Specimen projection folder (<name>\_\_<id>) \\
+│       ├── *\_ortho\_00.png & 3 & Orthographic projection PNG \\
+│       └── *\_rot\_000.png & 3 & Rotational projection PNG \\
+└── synthetic/ & 1 & Synthetic dataset root \\
+├── synthetic\_images/ & 2 & Deformed projection images \\
+│   └── *\_\_comp*.png & 3 & Example compression image \\
+├── deformation\_masks/ & 2 & Binary deformation masks \\
+│   └── *\_mask.png & 3 & Example mask file \\
+└── synthetic\_labels.csv & 2 & Per-image label CSV (11 columns) \\
+\bottomrule
+\end{tabular}
+\end{table}

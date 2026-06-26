@@ -1,0 +1,5 @@
+Parameter,n,Mean,Std,Min,Max,Range
+c (Compression Factor),240,0.5945,0.1669,0.3007,0.8993,"[0.3, 0.9]"
+k (Shear Coefficient),240,-0.0114,0.3025,-0.4955,0.4821,"[-0.5, 0.5]"
+sₓ (Stretch X),240,1.2520,0.1513,1.0003,1.4977,"[1.0, 1.5]"
+λ (Dissolution Intensity),240,0.5466,0.1482,0.3062,0.7996,"[0.3, 0.8]"

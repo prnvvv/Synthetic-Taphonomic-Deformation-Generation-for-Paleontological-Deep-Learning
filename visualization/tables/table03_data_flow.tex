@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\caption{Data transformations, formats, and memory profiles at each TDE pipeline step.}
+\label{tab:data_flow}
+\begin{tabular}{lrrr}
+\toprule
+Step & Input Format & Output Format & Memory Profile \\
+\midrule
+JP2 Slices (uint16) & uint16 JP2 & uint16 volume & O(D·H·W) \\
+Streaming MIP & uint16 volume & 3× MIP plane & O(H·W) \\
+Percentile Norm. & float32 MIP & uint8 [0,255] & O(H·W) \\
+INTER\_AREA Resize & uint8 224×224 & uint8 224×224 & O(224²) \\
+PNG Projections & uint8 PNG & 30 PNG/specimen & O(224²) \\
+Affine / Intensity Deform & uint8 PNG & uint8 PNG + mask & O(224²) \\
+Synthetic Dataset & uint8 PNGs & CSV + zip archives & O(N·224²) \\
+\bottomrule
+\end{tabular}
+\end{table}

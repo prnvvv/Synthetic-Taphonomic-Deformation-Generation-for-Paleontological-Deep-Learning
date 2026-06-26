@@ -1,0 +1,5 @@
+Specimen,Specimen Key,Voxel Size (µm),Ortho Image,Rotation Image,Resolution,Bit Depth
+Araripesaurus,araripesaurus__BSPG-1982-I-90,45.92,araripesaurus__BSPG-1982-I-90_ortho_00.png,araripesaurus__BSPG-1982-I-90_rot_045.png,224×224,uint8
+Archaeopteryx,archaeopteryx_london__BMNH-37001,13.0,archaeopteryx_london__BMNH-37001_ortho_00.png,archaeopteryx_london__BMNH-37001_rot_045.png,224×224,uint8
+Halszkaraptor,halszkaraptor__MPC-D-102-109,107.16,halszkaraptor__MPC-D-102-109_ortho_00.png,halszkaraptor__MPC-D-102-109_rot_045.png,224×224,uint8
+Titanosaur Emb.,titanosaur_embryo__MCF-PVPH-874,14.92,titanosaur_embryo__MCF-PVPH-874_ortho_00.png,titanosaur_embryo__MCF-PVPH-874_rot_045.png,224×224,uint8

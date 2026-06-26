@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="503.28pt" height="223.272pt" viewBox="0 0 503.28 223.272" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-06-26T14:49:11.938673</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 223.272 
+L 503.28 223.272 
+L 503.28 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g clip-path="url(#p6f8dc1bcdf)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAesAAADxCAYAAADryZ/oAAAE5UlEQVR4nO3XsesPeBzH8Q/phD9A6gbqJCkDV4qZqEuRDfUb6C6F4QajP8B2V1cmym/kziZZLMJgsfwGi4Uy4ro6BvqtJovP9+nX4/EPvHr3GZ591n1c3vxpTHD593MzZsZfb/5YNxbgwYFTJ8cYd2ZsHbz5dsbMP1t2P1i9abo/d/66PMY4/a13ju15PiY5+9Pdx6s3TXdh66X/xhibvvXOie2vxyRbDj+9vXrTVO+vbDs6xrg3Y+vm38dnzNy/+OL66k3fpY/Lm5fGGDcWsf1h/6FFzI71C1kFAL6aWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQJxYA0CcWANAnFgDQNyGI+fPThk6+eP/U3bGm7EQO7a9mrb1y769Yy1bebdxys7Srpdjrbv2cGXKzo6f/x1r2ZOHh6Zt/Xb11pSdi2fGd+vD/nnv8aUfnj1ayK6fNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAxIk1AMSJNQDEiTUAjLbPp5U3z4gMpLIAAAAASUVORK5CYII=" id="image24d6b37d6b" transform="scale(1 -1) translate(0 -57.84)" x="24" y="-50.432" width="117.84" height="57.84"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #333333; font: 6px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="30.471" y="41.306962" transform="rotate(-0 30.471 41.306962)">Slice 1</text>
+   </g>
+   <g id="patch_2">
+    <path d="M 38.674003 79.1616 
+Q 40.393671 79.1616 41.218912 79.1616 
+" style="fill: none; stroke: #777777; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 37.618912 77.3616 
+L 41.218912 79.1616 
+L 37.618912 80.9616 
+z
+" style="fill: #777777; stroke: #777777; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_2">
+    <text style="fill: #333333; font: 6px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="50.3142" y="41.306962" transform="rotate(-0 50.3142 41.306962)">Slice 2</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 58.517203 79.1616 
+Q 60.236871 79.1616 61.062112 79.1616 
+" style="fill: none; stroke: #777777; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 57.462112 77.3616 
+L 61.062112 79.1616 
+L 57.462112 80.9616 
+z
+" style="fill: #777777; stroke: #777777; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="fill: #333333; font: 6px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="70.1574" y="41.306962" transform="rotate(-0 70.1574 41.306962)">Slice 3</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 78.360403 79.1616 
+Q 80.080071 79.1616 80.905312 79.1616 
+" style="fill: none; stroke: #777777; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 77.305312 77.3616 
+L 80.905312 79.1616 
+L 77.305312 80.9616 
+z
+" style="fill: #777777; stroke: #777777; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="fill: #333333; font: 6px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="90.0006" y="41.306962" transform="rotate(-0 90.0006 41.306962)">Slice 4</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 98.203603 79.1616 
+Q 99.923271 79.1616 100.748512 79.1616 
+" style="fill: none; stroke: #777777; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 97.148512 77.3616 
+L 100.748512 79.1616 
+L 97.148512 80.9616 
+z
+" style="fill: #777777; stroke: #777777; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #333333; font: 6px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="109.8438" y="41.306962" transform="rotate(-0 109.8438 41.306962)">Slice 5</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 126.311977 79.1616 
+Q 126.965988 79.1616 126.278359 79.1616 
+" style="fill: none; stroke: #c44e52; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 122.678359 77.3616 
+L 126.278359 79.1616 
+L 122.678359 80.9616 
+z
+" style="fill: #c44e52; stroke: #c44e52; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="fill: #c44e52; font: 700 7px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(128.050828 34.022837)">MIP</text>
+    <text style="fill: #c44e52; font: 700 7px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(126.108328 41.093056)">(max)</text>
+   </g>
+   <g id="text_7">
+    <g id="patch_7">
+     <path d="M 153.317344 164.675953 
+L 349.962656 164.675953 
+L 349.962656 139.932047 
+L 153.317344 139.932047 
+z
+" style="fill: #fff9f0; stroke: #ddaa77; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <text style="fill: #333333; font: 7.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(161.457187 150.164859)">Peak memory: O(H·W)  vs  O(D·H·W) for full volume load</text>
+    <text style="fill: #333333; font: 7.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(158.342344 158.032594)">→ ~20 MB regardless of volume depth (D = 300–2000 slices)</text>
+   </g>
+   <g id="text_8">
+    <g id="patch_8">
+     <path d="M 110.687891 204.067681 
+L 392.592109 204.067681 
+L 392.592109 189.081119 
+L 110.687891 189.081119 
+z
+" style="fill: #f0f4ff; stroke: #aabbdd; stroke-width: 0.6; stroke-linejoin: miter"/>
+    </g>
+    <text style="fill: #4c72b0; font: 7px 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Computer Modern Typewriter', 'Andale Mono', 'Nimbus Mono L', 'Courier New', 'Courier', 'Fixed', 'Terminal', monospace; text-anchor: middle" x="251.64" y="198.427212" transform="rotate(-0 251.64 198.427212)">np.maximum(mip_axis0, arr, out=mip_axis0)  ← in-place O(1) update</text>
+   </g>
+  </g>
+  <g id="text_9">
+   <text style="font: 700 9.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="251.64" y="10.039219" transform="rotate(-0 251.64 10.039219)">Streaming MIP Algorithm — Single-Pass Memory Efficiency</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6f8dc1bcdf">
+   <rect x="3.6" y="27.192" width="496.08" height="192.48"/>
+  </clipPath>
+ </defs>
+</svg>

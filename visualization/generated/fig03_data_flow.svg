@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="503.28pt" height="203.112pt" viewBox="0 0 503.28 203.112" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-06-26T14:49:02.052728</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 203.112 
+L 503.28 203.112 
+L 503.28 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 31.2978 165.1896 
+L 90.0006 165.1896 
+Q 91.2408 165.1896 91.2408 160.2864 
+L 91.2408 75.2976 
+Q 91.2408 70.3944 90.0006 70.3944 
+L 31.2978 70.3944 
+Q 30.0576 70.3944 30.0576 75.2976 
+L 30.0576 160.2864 
+Q 30.0576 165.1896 31.2978 165.1896 
+z
+" clip-path="url(#p810ec21e81)" style="fill: #4c72b0; opacity: 0.8; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 94.9614 165.1896 
+L 153.6642 165.1896 
+Q 154.9044 165.1896 154.9044 160.2864 
+L 154.9044 75.2976 
+Q 154.9044 70.3944 153.6642 70.3944 
+L 94.9614 70.3944 
+Q 93.7212 70.3944 93.7212 75.2976 
+L 93.7212 160.2864 
+Q 93.7212 165.1896 94.9614 165.1896 
+z
+" clip-path="url(#p810ec21e81)" style="fill: #c44e52; opacity: 0.8; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 158.625 165.1896 
+L 217.3278 165.1896 
+Q 218.568 165.1896 218.568 160.2864 
+L 218.568 75.2976 
+Q 218.568 70.3944 217.3278 70.3944 
+L 158.625 70.3944 
+Q 157.3848 70.3944 157.3848 75.2976 
+L 157.3848 160.2864 
+Q 157.3848 165.1896 158.625 165.1896 
+z
+" clip-path="url(#p810ec21e81)" style="fill: #c44e52; opacity: 0.8; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 222.2886 165.1896 
+L 280.9914 165.1896 
+Q 282.2316 165.1896 282.2316 160.2864 
+L 282.2316 75.2976 
+Q 282.2316 70.3944 280.9914 70.3944 
+L 222.2886 70.3944 
+Q 221.0484 70.3944 221.0484 75.2976 
+L 221.0484 160.2864 
+Q 221.0484 165.1896 222.2886 165.1896 
+z
+" clip-path="url(#p810ec21e81)" style="fill: #c44e52; opacity: 0.8; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 285.9522 165.1896 
+L 344.655 165.1896 
+Q 345.8952 165.1896 345.8952 160.2864 
+L 345.8952 75.2976 
+Q 345.8952 70.3944 344.655 70.3944 
+L 285.9522 70.3944 
+Q 284.712 70.3944 284.712 75.2976 
+L 284.712 160.2864 
+Q 284.712 165.1896 285.9522 165.1896 
+z
+" clip-path="url(#p810ec21e81)" style="fill: #dd8452; opacity: 0.8; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 349.6158 165.1896 
+L 408.3186 165.1896 
+Q 409.5588 165.1896 409.5588 160.2864 
+L 409.5588 75.2976 
+Q 409.5588 70.3944 408.3186 70.3944 
+L 349.6158 70.3944 
+Q 348.3756 70.3944 348.3756 75.2976 
+L 348.3756 160.2864 
+Q 348.3756 165.1896 349.6158 165.1896 
+z
+" clip-path="url(#p810ec21e81)" style="fill: #55a868; opacity: 0.8; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 413.2794 165.1896 
+L 471.9822 165.1896 
+Q 473.2224 165.1896 473.2224 160.2864 
+L 473.2224 75.2976 
+Q 473.2224 70.3944 471.9822 70.3944 
+L 413.2794 70.3944 
+Q 412.0392 70.3944 412.0392 75.2976 
+L 412.0392 160.2864 
+Q 412.0392 165.1896 413.2794 165.1896 
+z
+" clip-path="url(#p810ec21e81)" style="fill: #55a868; opacity: 0.8; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(55.655778 99.846603)">JP2</text>
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(53.244075 106.099497)">Slices</text>
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(50.143591 112.366341)">(uint16)</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(50.979942 144.018409)">D×H×W</text>
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(53.469122 149.777769)">voxels</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 92.001391 117.792 
+Q 92.482682 117.792 91.845938 117.792 
+" style="fill: none; stroke: #333333; stroke-linecap: round"/>
+    <path d="M 88.245938 115.992 
+L 91.845938 117.792 
+L 88.245938 119.592 
+z
+" style="fill: #333333; stroke: #333333; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(110.591425 103.02265)">Streaming</text>
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(118.286691 109.287169)">MIP</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(115.121784 144.018409)">3 × MIP</text>
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(117.28698 149.777769)">planes</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 155.664991 117.792 
+Q 156.146282 117.792 155.509538 117.792 
+" style="fill: none; stroke: #333333; stroke-linecap: round"/>
+    <path d="M 151.909538 115.992 
+L 155.509538 117.792 
+L 151.909538 119.592 
+z
+" style="fill: #333333; stroke: #333333; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(174.77815 102.980025)">Percentile</text>
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(179.454306 109.232919)">Norm.</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(182.323431 144.018409)">uint8</text>
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(179.957572 149.777769)">[0,255]</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 219.328591 117.792 
+Q 219.809882 117.792 219.173138 117.792 
+" style="fill: none; stroke: #333333; stroke-linecap: round"/>
+    <path d="M 215.573138 115.992 
+L 219.173138 117.792 
+L 215.573138 119.592 
+z
+" style="fill: #333333; stroke: #333333; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(231.486125 103.016353)">INTER_AREA</text>
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(243.205094 109.280872)">Resize</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(241.839258 144.018409)">224×224</text>
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(248.89 149.777769)">px</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 282.992191 117.792 
+Q 283.473482 117.792 282.836738 117.792 
+" style="fill: none; stroke: #333333; stroke-linecap: round"/>
+    <path d="M 279.236738 115.992 
+L 282.836738 117.792 
+L 279.236738 119.592 
+z
+" style="fill: #333333; stroke: #333333; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(308.760178 102.916087)">PNG</text>
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(300.380006 109.285231)">Projections</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(311.789616 144.018409)">30/</text>
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(304.918053 149.777769)">specimen</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 346.655791 117.792 
+Q 347.137082 117.792 346.500338 117.792 
+" style="fill: none; stroke: #333333; stroke-linecap: round"/>
+    <path d="M 342.900338 115.992 
+L 346.500338 117.792 
+L 342.900338 119.592 
+z
+" style="fill: #333333; stroke: #333333; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(356.578903 103.02265)">Affine / Intensity</text>
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(368.811794 109.287169)">Deform</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(371.099622 144.002941)">4 types</text>
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(368.048841 149.772612)">per image</text>
+   </g>
+   <g id="patch_14">
+    <path d="M 410.319391 117.792 
+Q 410.800682 117.792 410.163938 117.792 
+" style="fill: none; stroke: #333333; stroke-linecap: round"/>
+    <path d="M 406.563938 115.992 
+L 410.163938 117.792 
+L 406.563938 119.592 
+z
+" style="fill: #333333; stroke: #333333; stroke-linecap: round"/>
+   </g>
+   <g id="text_13">
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(430.231284 103.02265)">Synthetic</text>
+    <text style="fill: #ffffff; font: 700 6.2px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(432.644925 109.287169)">Dataset</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(432.46998 144.013253)">960 imgs</text>
+    <text style="fill: #ffffff; opacity: 0.9; font: 5.5px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(429.392128 149.782925)">+960 masks</text>
+   </g>
+  </g>
+  <g id="text_15">
+   <text style="font: 700 10px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="251.64" y="10.378125" transform="rotate(-0 251.64 10.378125)">TDE Data Flow Diagram</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p810ec21e81">
+   <rect x="3.6" y="36.072" width="496.08" height="163.44"/>
+  </clipPath>
+ </defs>
+</svg>

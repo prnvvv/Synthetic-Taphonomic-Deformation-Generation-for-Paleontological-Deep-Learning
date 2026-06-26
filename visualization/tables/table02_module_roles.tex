@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\caption{TDE pipeline module roles and responsibilities.}
+\label{tab:module_roles}
+\begin{tabular}{lrr}
+\toprule
+Module & Person & Role \\
+\midrule
+create\_folder.py & Person 1 & Create folder hierarchy \\
+organise\_data.py & Person 1 & Move ESRF downloads \\
+clean\_dataset.py & Person 1 & Clean \& rename slices \\
+remove\_extras.py & Person 1 & Remove non-image extras \\
+generate\_projections.py & Person 2 & Streaming MIP projection \\
+generate\_synthetic.py & Person 3 & Synthetic deformation \\
+dataset/raw/ & Data & Raw CT slice store \\
+dataset/projections/ & Data & 2-D projection store \\
+dataset/synthetic/ & Data & Synthetic dataset store \\
+\bottomrule
+\end{tabular}
+\end{table}

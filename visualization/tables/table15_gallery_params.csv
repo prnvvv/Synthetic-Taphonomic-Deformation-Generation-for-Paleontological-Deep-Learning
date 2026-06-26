@@ -1,0 +1,5 @@
+Deformation,Parameter Value,Synthetic File,Mask File
+Compression,c = 0.7644,araripesaurus__BSPG-1982-I-90_ortho_00__comp_c0.764.png,araripesaurus__BSPG-1982-I-90_ortho_00__comp_c0.764_mask.png
+Shearing,k = -0.0611,araripesaurus__BSPG-1982-I-90_ortho_00__shear_k-0.061.png,araripesaurus__BSPG-1982-I-90_ortho_00__shear_k-0.061_mask.png
+Stretching,"sx = 1.4293, sy = 1.3487",araripesaurus__BSPG-1982-I-90_ortho_00__stretch_sx1.429_sy1.349.png,araripesaurus__BSPG-1982-I-90_ortho_00__stretch_sx1.429_sy1.349_mask.png
+Dissolution,λ = 0.3471,araripesaurus__BSPG-1982-I-90_ortho_00__diss_lam0.347.png,araripesaurus__BSPG-1982-I-90_ortho_00__diss_lam0.347_mask.png

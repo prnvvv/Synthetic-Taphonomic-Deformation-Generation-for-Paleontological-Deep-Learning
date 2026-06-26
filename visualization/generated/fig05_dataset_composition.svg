@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="292.170375pt" height="232.521844pt" viewBox="0 0 292.170375 232.521844" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-06-26T14:49:02.456522</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 232.521844 
+L 292.170375 232.521844 
+L 292.170375 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 105.588 45.343444 
+C 94.873647 45.343444 84.263477 47.453938 74.364706 51.554143 
+C 64.465934 55.654349 55.471067 61.664527 47.894875 69.240719 
+L 105.588 126.933844 
+z
+" style="fill: #e69f00; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 47.894876 69.24072 
+C 40.318684 76.816911 34.308496 85.81179 30.208292 95.710562 
+C 26.108088 105.609336 23.9976 116.219496 23.9976 126.933851 
+L 105.588 126.933844 
+z
+" style="fill: #56b4e9; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 23.9976 126.933851 
+C 23.9976 137.648201 26.108098 148.258371 30.208302 158.15714 
+C 34.308506 168.055907 40.31868 177.050772 47.894871 184.626963 
+L 105.588 126.933844 
+z
+" style="fill: #009e73; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 47.894871 184.626963 
+C 55.471062 192.203154 64.465922 198.213328 74.364694 202.313537 
+C 84.263466 206.413746 94.873646 208.524244 105.588001 208.524244 
+L 105.588 126.933844 
+z
+" style="fill: #f0e442; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 105.588001 208.524244 
+C 116.302352 208.524244 126.912539 206.413741 136.811306 202.313537 
+C 146.710073 198.213333 155.704923 192.203164 163.281114 184.626978 
+L 105.588 126.933844 
+z
+" style="fill: #0072b2; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 163.281114 184.626978 
+C 170.857311 177.050781 176.867494 168.055917 180.967703 158.157138 
+C 185.067912 148.258361 187.1784 137.648188 187.1784 126.933829 
+L 105.588 126.933844 
+z
+" style="fill: #d55e00; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 187.1784 126.933829 
+C 187.1784 116.219479 185.067907 105.609329 180.967703 95.71056 
+C 176.867499 85.81179 170.857316 76.816911 163.281124 69.24072 
+L 105.588 126.933844 
+z
+" style="fill: #cc79a7; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 163.281124 69.24072 
+C 155.704933 61.664528 146.710053 55.65434 136.811282 51.554136 
+C 126.912512 47.453932 116.302361 45.343444 105.588011 45.343444 
+L 105.588 126.933844 
+z
+" style="stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="text_1">
+    <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="81.233825" y="69.699203" transform="rotate(-0 81.233825 69.699203)">12.5%</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="46.791829" y="104.141207" transform="rotate(-0 46.791829 104.141207)">12.5%</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="46.791834" y="152.849537" transform="rotate(-0 46.791834 152.849537)">12.5%</text>
+   </g>
+   <g id="text_4">
+    <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="81.23385" y="187.291542" transform="rotate(-0 81.23385 187.291542)">12.5%</text>
+   </g>
+   <g id="text_5">
+    <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="129.94218" y="187.291529" transform="rotate(-0 129.94218 187.291529)">12.5%</text>
+   </g>
+   <g id="text_6">
+    <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="164.384167" y="152.849536" transform="rotate(-0 164.384167 152.849536)">12.5%</text>
+   </g>
+   <g id="text_7">
+    <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="164.384158" y="104.141178" transform="rotate(-0 164.384158 104.141178)">12.5%</text>
+   </g>
+   <g id="text_8">
+    <text style="font: 6.5px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="129.942159" y="69.699196" transform="rotate(-0 129.942159 69.699196)">12.5%</text>
+   </g>
+   <g id="text_9">
+    <text style="font: 700 9px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(65.464172 9.700312)">Dataset Composition</text>
+    <text style="font: 700 9px 'Times New Roman', 'DejaVu Serif', serif" transform="translate(81.212063 18.945844)">by Specimen</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_10">
+     <path d="M 212.476 167.599469 
+L 287.170375 167.599469 
+Q 288.570375 167.599469 288.570375 166.199469 
+L 288.570375 87.668219 
+Q 288.570375 86.268219 287.170375 86.268219 
+L 212.476 86.268219 
+Q 211.076 86.268219 211.076 87.668219 
+L 211.076 166.199469 
+Q 211.076 167.599469 212.476 167.599469 
+z
+" style="fill: #ffffff; opacity: 0.9; stroke: #cccccc; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="patch_11">
+     <path d="M 213.876 93.968219 
+L 227.876 93.968219 
+L 227.876 89.068219 
+L 213.876 89.068219 
+z
+" style="fill: #e69f00; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font: 7px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="233.476" y="93.968219" transform="rotate(-0 233.476 93.968219)">Araripesaurus</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 213.876 103.865562 
+L 227.876 103.865562 
+L 227.876 98.965562 
+L 213.876 98.965562 
+z
+" style="fill: #56b4e9; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font: 7px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="233.476" y="103.865562" transform="rotate(-0 233.476 103.865562)">Archaeopteryx</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 213.876 113.776031 
+L 227.876 113.776031 
+L 227.876 108.876031 
+L 213.876 108.876031 
+z
+" style="fill: #009e73; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font: 7px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="233.476" y="113.776031" transform="rotate(-0 233.476 113.776031)">Halszkaraptor</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 213.876 123.673375 
+L 227.876 123.673375 
+L 227.876 118.773375 
+L 213.876 118.773375 
+z
+" style="fill: #f0e442; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font: 7px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="233.476" y="123.673375" transform="rotate(-0 233.476 123.673375)">Hesperornis</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 213.876 133.570719 
+L 227.876 133.570719 
+L 227.876 128.670719 
+L 213.876 128.670719 
+z
+" style="fill: #0072b2; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font: 7px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="233.476" y="133.570719" transform="rotate(-0 233.476 133.570719)">Ichthyornis (1460)</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 213.876 143.481187 
+L 227.876 143.481187 
+L 227.876 138.581187 
+L 213.876 138.581187 
+z
+" style="fill: #d55e00; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font: 7px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="233.476" y="143.481187" transform="rotate(-0 233.476 143.481187)">Ichthyornis (1775)</text>
+    </g>
+    <g id="patch_17">
+     <path d="M 213.876 153.391656 
+L 227.876 153.391656 
+L 227.876 148.491656 
+L 213.876 148.491656 
+z
+" style="fill: #cc79a7; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font: 7px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="233.476" y="153.391656" transform="rotate(-0 233.476 153.391656)">Titanosaur Emb.</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 213.876 163.289 
+L 227.876 163.289 
+L 227.876 158.389 
+L 213.876 158.389 
+z
+" style="stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font: 7px 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="233.476" y="163.289" transform="rotate(-0 233.476 163.289)">Tropeognathus</text>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

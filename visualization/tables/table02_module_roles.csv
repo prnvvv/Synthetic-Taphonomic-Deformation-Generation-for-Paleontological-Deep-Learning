@@ -1,0 +1,10 @@
+Module,Person,Role
+create_folder.py,Person 1,Create folder hierarchy
+organise_data.py,Person 1,Move ESRF downloads
+clean_dataset.py,Person 1,Clean & rename slices
+remove_extras.py,Person 1,Remove non-image extras
+generate_projections.py,Person 2,Streaming MIP projection
+generate_synthetic.py,Person 3,Synthetic deformation
+dataset/raw/,Data,Raw CT slice store
+dataset/projections/,Data,2-D projection store
+dataset/synthetic/,Data,Synthetic dataset store
